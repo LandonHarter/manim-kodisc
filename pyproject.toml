@@ -5,14 +5,12 @@ description = ""
 authors = [
     {name = "LandonHarter",email = "landonharter@outlook.com"}
 ]
-readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.11"
 dependencies = [
 ]
 
 [tool.poetry]
 packages = [{include = "manim_kodisc", from = "src"}]
-readme = {file = "README.md", content-type = "text/markdown"}
 
 [tool.poetry.dependencies]
 python = ">=3.11"
