@@ -1,0 +1,21 @@
+[project]
+name = "manim-kodisc"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "LandonHarter",email = "landonharter@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "manim_kodisc", from = "src"}]
+
+[tool.poetry.plugins."manim.plugins"]
+"manim_kodisc" = "manim_kodisc"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
