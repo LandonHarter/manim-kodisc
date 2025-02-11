@@ -18,11 +18,17 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Build release distributions
+      - name: Install build dependencies
         run: |
-          # NOTE: put your own distribution build steps here.
-          python -m pip install build
-          python -m build
+          python -m pip install --upgrade pip
+          python -m pip install build twine readme-renderer[md]
+
+      - name: Build release distributions
+        run: python -m build
+
+      - name: Check README rendering
+        run: |
+          twine check dist/*
 
       - name: Upload distributions
         uses: actions/upload-artifact@v4
