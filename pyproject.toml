@@ -1,25 +1,17 @@
-[
-build-system
-]
+[build-system]
 requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[
-tool.poetry
-]
+[tool.poetry]
 name = "manim-kodisc"
 version = "1.0.0"
-description = "Manim plugin for KoDisc"
+description = "Manim plugin for Kodisc"
 authors = ["LandonHarter <landonharter@outlook.com>"]
 packages = [{include = "manim_kodisc", from = "src"}]
 
-[
-tool.poetry.dependencies
-]
+[tool.poetry.dependencies]
 python = ">=3.11"
 manim = "~0.18.0"
 
-[
-tool.poetry.plugins."manim.plugins"
-]
+[tool.poetry.plugins."manim.plugins"]
 "manim_kodisc" = "manim_kodisc"
