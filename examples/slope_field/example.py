@@ -1,3 +1,5 @@
+from manim import *
+
 from manim_kodisc import *
 
 
