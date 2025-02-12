@@ -1,2 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/lando/OneDrive/Documents/Coding/manim-kodisc/examples/particle_simulation/media/videos/example/480p15/partial_movie_files/ParticleSimulationExample/1185818338_194622004_153022704.mp4'
