@@ -23,7 +23,7 @@ class ParticleSimulation(Group):
             })
             self.add(particle)
 
-    def update_particles(self, dt):
+    def update_particles(self, dt = 1 / config.frame_rate):
         for particle in self.particles:
             pos = particle["pos"]
             velocity = particle["velocity"]
