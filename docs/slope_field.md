@@ -9,7 +9,7 @@ class SlopeField(VGroup):
     def __init__(self, func, x_range=(-10, 10), y_range=(-10, 10), step_size=1, **kwargs)
 ```
 
-- `func`: The function that defines the slope field.
+- `func`: The function that defines the slope field. This will only have x as an argument. Do not include y.
 - `x_range`: The range of x-values over which to draw the slope field.
 - `y_range`: The range of y-values over which to draw the slope field.
 - `step_size`: How dense the grid of line segments should be.
