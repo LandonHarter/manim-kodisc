@@ -11,14 +11,7 @@ class CardSuit(Enum):
     CLUBS = 2
     SPADES = 3
 
-def Flip(card: Card, **kwargs):
-    card.face_up = not card.face_up
-    def update(group, alpha):
-        if (card.face_up):
-            group.back.set_opacity(0)
-        else:
-            group.back.set_opacity(1)
-    return AnimationGroup([Rotate(card, PI, axis=np.array([0, 1, 0]), **kwargs), UpdateFromAlphaFunc(card, update, **kwargs)], lag_ratio=0.5)
+def Flip(card: Card, **kwargs)
 
 class Card(Group):
     def __init__(self, suit: CardSuit, number: int = 1, face_up: bool = True, card_radius=0.1, **kwargs)
@@ -36,6 +29,7 @@ class Card(Group):
 Flip is an animation that flips the card over.
 
 - `card`: The card to flip.
+- `**kwargs`: Additional arguments to pass to the `Flip` animation, can use Animation arguments.
 
 ## Example
 
