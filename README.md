@@ -8,7 +8,7 @@ AI tends to struggle with creating complex animations. manim-kodisc is a small m
  
 # Examples
 
-![Particle Simulation](./examples/particle_simulation/ParticleSimulationExample.mp4)
+[Particle Simulation](./examples/particle_simulation/ParticleSimulationExample.mp4)
 
 # Installation
 
