@@ -1,3 +1,5 @@
 .pypirc
 /dist
 publish.bat
+
+examples/*/media/*
