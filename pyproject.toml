@@ -12,6 +12,7 @@ packages = [{include = "manim_kodisc", from = "src"}]
 [tool.poetry.dependencies]
 python = ">=3.11"
 manim = "~0.18.0"
+pillow = "^9.0.0"
 
 [tool.poetry.plugins."manim.plugins"]
 "manim_kodisc" = "manim_kodisc"
