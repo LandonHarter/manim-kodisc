@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "manim-kodisc"
-version = "1.0.2"
+version = "1.0.3"
 description = "Manim plugin for Kodisc"
 authors = ["LandonHarter <landonharter@outlook.com>"]
 packages = [{include = "manim_kodisc", from = "src"}]

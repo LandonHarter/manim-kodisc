@@ -2,4 +2,4 @@
 /dist
 publish.bat
 
-examples/*/media/*
+examples/**/media/*
