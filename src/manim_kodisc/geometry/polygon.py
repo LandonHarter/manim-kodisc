@@ -13,12 +13,12 @@ class BetterPolygon(Polygon):
         num_vertices = len(vertices)
         for i in range(num_vertices):
             label = angle_labels[i] if angle_labels and i < len(angle_labels) else None
-            angle = self.draw_angle(i, label, radius, label_size, label_as_angle)
+            angle = self.get_angle(i, label, radius, label_size, label_as_angle)
             self.angles.append(angle)
         
         return VGroup(*self.angles)
     
-    def draw_angle(self, index: int, label: str = None, radius: float = 0.5, label_size: int = 24, label_as_angle=False) -> VGroup:
+    def get_angle(self, index: int, label: str = None, radius: float = 0.5, label_size: int = 24, label_as_angle=False) -> VGroup:
         vertices = self.get_vertices()
         num_vertices = len(vertices)
         
