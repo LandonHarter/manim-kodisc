@@ -15,7 +15,7 @@ class PolygonExample(Scene):
         )
         self.play(Create(polygon))   
         self.wait(1)
-        self.play(Create(polygon.get_angles(angle_labels=["a", "b", "c", "d"], radius=0.6, label_size=30)))
+        self.play(Create(polygon.get_angles(angle_labels=["a", "b", "c", "d"], radius=0.6, label_size=30, label_as_angle=True)))
         self.wait(5)
 
 class RegularPolygonExample(Scene):
