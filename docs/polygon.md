@@ -9,6 +9,7 @@ class BetterPolygon(Polygon):
     def __init__(self, *vertices, **kwargs)
     def get_angles(self, angle_labels: list[str] = None, radius: float = 0.5, label_size: int = 24, label_as_angle=False) -> VGroup
     def get_angle(self, index: int, label: str = None, radius: float = 0.5, label_size: int = 24, label_as_angle=False) -> VGroup
+    def get_side_labels(self, labels: list[str], label_size: int = 24) -> VGroup
 ```
 
 ### get_angles
@@ -25,6 +26,11 @@ Returns a `VGroup` of angle labels for each angle in the polygon.
 - `radius`: The radius (size) of the angle arc.
 - `label_size`: The font size of the angle label.
 - `label_as_angle`: If `True`, the angle label will be displayed as the angle measure. If `False`, the angle label will be displayed as the given label.
+
+### get_side_labels
+`get_side_labels`: Returns a `VGroup` of labels for each side in the polygon.
+- `labels`: A list of labels for each side in the polygon.
+- `label_size`: The font size of the side labels.
 
 ## Example
 
@@ -44,6 +50,8 @@ class PolygonExample(Scene):
         )
         self.play(Create(polygon))   
         self.wait(1)
-        self.play(Create(polygon.get_angles(angle_labels=["a", "b", "c"], radius=0.6, label_size=30)))
+        self.play(Create(polygon.get_angles(angle_labels=["CA", "AB", "BC"], radius=0.6, label_size=30)))
+        self.wait(1)
+        self.play(Create(polygon.get_side_labels(labels=["A", "B", "C"], label_size=30)))
         self.wait(5)
 ```

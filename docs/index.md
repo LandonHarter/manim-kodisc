@@ -8,5 +8,9 @@
 - [Particle Simulation](./particle_simulation.md)
 - [Force Diagram](./force_diagram.md)
 
+# Geometry
+- [BetterPolygon](./polygon.md)
+- [BetterRegularPolygon](./regular_polygon.md)
+
 # Miscellaneous
 - [Web Image](./web_image.md)

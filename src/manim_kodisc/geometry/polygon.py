@@ -75,12 +75,33 @@ class BetterPolygon(Polygon):
                 0
             ])
 
-            content = f"{round(interior_angle * DEGREES * 3600)}" if label_as_angle else label
+            content = f"{int(np.degrees(interior_angle))}" if label_as_angle else label
             text = MathTex(content, color=self.get_color(), font_size=label_size)
             text.move_to(label_pos)
             angle_marker.add(text)
         
         return angle_marker
+    
+    def get_side_labels(self, labels: list[str], label_size: int = 24) -> VGroup:
+        vertices = self.get_vertices()
+        num_vertices = len(vertices)
+        
+        side_labels = VGroup()
+        for i in range(num_vertices):
+            p1 = vertices[i]
+            p2 = vertices[(i + 1) % num_vertices]
+            
+            mid_point = (p1 + p2) / 2
+            outward_normal = np.array([-(p2[1] - p1[1]), p2[0] - p1[0], 0])
+            outward_normal /= np.linalg.norm(outward_normal)
+            mid_point -= 0.5 * outward_normal
+            
+            content = labels[i] if labels and i < len(labels) else f"l_{i}"
+            text = MathTex(content, color=self.get_color(), font_size=label_size)
+            text.move_to(mid_point)
+            side_labels.add(text)
+        
+        return side_labels
     
     def get_start_angle(self, p1: np.ndarray, p2: np.ndarray) -> tuple[int, int]:
         v1 = p1 - p2
