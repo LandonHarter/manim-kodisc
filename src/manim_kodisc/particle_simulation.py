@@ -14,8 +14,8 @@ class ParticleSimulation(Group):
         for i in range(n_particles):
             col = particle_colors[i % len(particle_colors)]
             particle = Dot(radius=0.05, color=col)
-            pos = np.array([np.random.rand() * container_dimensions[0], np.random.rand() * container_dimensions[1], 0])
-            particle.move_to(np.array([pos[0] + (self.container.get_center()[0] - (self.container_dimensions[0] / 2)), pos[1] + (self.container.get_center()[1] - (self.container_dimensions[1] / 2)), 0]))
+            pos = np.array([np.random.rand() * container_dimensions[0] * 0.5, np.random.rand() * container_dimensions[1] * 0.5, 0])
+            particle.move_to(np.array([pos[0] + (self.container.get_center()[0] - (self.container_dimensions[0] / 4)), pos[1] + (self.container.get_center()[1] - (self.container_dimensions[1] / 4)), 0]))
             self.particles.append({
                 "particle": particle,
                 "pos": pos,
