@@ -29,7 +29,7 @@ class ParticleSimulation(Group):
             velocity = particle["velocity"]
             for i in range(2):
                 pos[i] += velocity[i] * dt * (self.temp / 273 /2)
-                if pos[i] < 0 or pos[i] > self.container_dimensions[i]:
+                if pos[i] <= 0 or pos[i] >= self.container_dimensions[i]:
                     velocity[i] *= -1
             particle["pos"] = pos
             particle["velocity"] = velocity
