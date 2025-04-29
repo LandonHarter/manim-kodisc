@@ -42,6 +42,7 @@ class RotatingFunction(VMobject):
             resolution=(16, 32),
             fill_opacity=opacity,
             fill_color=color,
+            stroke_width=0,
             checkerboard_colors=False
         ))
         self.add(self.surface)
