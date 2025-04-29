@@ -18,6 +18,7 @@ Returns a `VGroup` of angle labels for each angle in the polygon.
 - `radius`: The radius (size) of the angle arc.
 - `label_size`: The font size of the angle labels.
 - `label_as_angle`: If `True`, the angle labels will be displayed as the angle measure. If `False`, the angle labels will be displayed as the given label.
+- get_angles handles both right angles and non-right angles.
 
 ### get_angle
 `get_angle`: Returns a `VGroup` of a single angle label for the angle at the given index.

@@ -1,6 +1,6 @@
 # Pi Chart
 
-Construct 
+Construct a pie chart using the `PiChart` class. This class is a subclass of `VGroup` and is used to create pie charts in Manim.
 
 ## Reference
 

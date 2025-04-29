@@ -6,6 +6,16 @@ class BetterPolygon(Polygon):
         self.angles = []
         super().__init__(*vertices, **kwargs)
 
+    def get_points(self, point_labels: list[str] = None, label_size: int = 24) -> VGroup:
+        self.points = []
+
+        for i, vertex in enumerate(self.get_vertices()):
+            label = point_labels[i] if point_labels and i < len(point_labels) else None
+            point = self.get_point(vertex, label, label_size)
+            self.points.append(point)
+        
+        return VGroup(*self.points)
+
     def get_angles(self, angle_labels: list[str] = None, radius: float = 0.5, label_size: int = 24, label_as_angle=False) -> VGroup:
         self.angles = []
 
